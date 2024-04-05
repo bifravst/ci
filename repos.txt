@@ -1,9 +1,3 @@
-hello-nrfcloud/backend
-hello-nrfcloud/certificate-helpers
-hello-nrfcloud/ci
-hello-nrfcloud/lambda-helpers
-hello-nrfcloud/map-backend
-hello-nrfcloud/proto
-hello-nrfcloud/proto-map
-hello-nrfcloud/public-parameter-registry-aws-js
-hello-nrfcloud/web
+bifravst/ci
+bifravst/aws-cdk-lambda-helpers
+bifravst/http-api-mock

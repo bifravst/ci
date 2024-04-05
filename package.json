@@ -1,5 +1,5 @@
 {
-  "name": "@hello.nrfcloud.com/ci",
+  "name": "@bifravst/ci",
   "version": "0.0.0-development",
   "description": "Sets up the permissions in our CI account for all repositories in this account to be able to use it for CI runs.",
   "exports": {
@@ -18,16 +18,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hello-nrfcloud/ci.git"
+    "url": "git+https://github.com/bifravst/ci.git"
   },
   "bugs": {
-    "url": "https://github.com/hello-nrfcloud/ci/issues"
+    "url": "https://github.com/bifravst/ci/issues"
   },
-  "homepage": "https://github.com/hello-nrfcloud/ci#readme",
+  "homepage": "https://github.com/bifravst/ci#readme",
   "keywords": [
     "nordicsemiconductor",
     "cellular-iot",
-    "hello-nrfcloud",
+    "bifravst",
     "aws",
     "cdk"
   ],

@@ -10,7 +10,7 @@ void describe('loadRepoList()', () => {
 			[
 				{
 					name: 'ci',
-					owner: 'hello-nrfcloud',
+					owner: 'bifravst',
 				},
 				{
 					name: 'aws-cdk-ecr-helpers',

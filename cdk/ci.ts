@@ -19,7 +19,7 @@ for (const repo of repos) {
 
 const iam = new IAMClient({})
 
-new CIApp(process.env.STACK_NAME ?? 'hello-nrfcloud-ci', {
+new CIApp(process.env.STACK_NAME ?? 'bifravst-ci', {
 	gitHubOICDProviderArn: await ensureGitHubOIDCProvider({
 		iam,
 	}),
