@@ -30,7 +30,7 @@ export class RepoPermission extends Construct {
 				gitHubOIDC.openIdConnectProviderArn,
 				{
 					StringEquals: {
-						[`token.actions.githubusercontent.com:sub`]: `repo:${repository.owner}/${repository.name}:environment:ci`,
+						[`token.actions.githubusercontent.com:sub`]: `repo:${repository.owner}/${repository.name}:*`,
 						[`token.actions.githubusercontent.com:aud`]: 'sts.amazonaws.com',
 					},
 				},
