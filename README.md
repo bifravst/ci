@@ -1,4 +1,4 @@
-# `hello.nrfcloud.com` CI [![npm version](https://img.shields.io/npm/v/@bifravst/ci.svg)](https://www.npmjs.com/package/@bifravst/ci)
+# Bifravst CI [![npm version](https://img.shields.io/npm/v/@bifravst/ci.svg)](https://www.npmjs.com/package/@bifravst/ci)
 
 [![GitHub Actions](https://github.com/bifravst/ci/workflows/Test%20and%20Release/badge.svg)](https://github.com/bifravst/ci/actions/workflows/test-and-release.yaml)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
