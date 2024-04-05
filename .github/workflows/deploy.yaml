@@ -1,0 +1,45 @@
+name: Deploy
+
+permissions:
+  id-token: write
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - saga
+env:
+  CI: 1
+  FORCE_COLOR: 3
+  JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION: 1
+  NODE_NO_WARNINGS: 1
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+
+    environment: ci
+
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --no-audit
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          # The role is set up via https://github.com/hello-nrfcloud/ci
+          role-to-assume: |
+            arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID_CI }}:role/hello-nrfcloud-ci-${{ github.event.repository.name }}
+          aws-region: ${{ vars.AWS_REGION_CI }}
+
+      - run: npx cdk deploy
