@@ -1,0 +1,39 @@
+name: Deploy
+
+permissions:
+  id-token: write
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - saga
+env:
+  CI: 1
+  FORCE_COLOR: 3
+  JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION: 1
+  NODE_NO_WARNINGS: 1
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+
+      # This will only work, if you've run `npx cdk deploy` once manually.
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          # The role is set up via https://github.com/bifravst/ci
+          # secrets.AWS_ACCOUNT_ID_CI is an organization secret
+          role-to-assume: |
+            arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID_CI }}:role/${{ github.repository_owner }}-ci-${{ github.event.repository.name }}
+          # vars.AWS_REGION_CI is an organization variable
+          aws-region: ${{ vars.AWS_REGION_CI }}
+
+      - run: npx cdk deploy --require-approval never
