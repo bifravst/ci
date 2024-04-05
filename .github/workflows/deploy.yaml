@@ -19,8 +19,6 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
 
-    environment: ci
-
     timeout-minutes: 5
 
     steps:
