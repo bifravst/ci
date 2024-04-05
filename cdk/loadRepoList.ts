@@ -1,9 +1,10 @@
-import path from 'node:path'
 import { readFile } from 'node:fs/promises'
 import type { Repository } from './listRepos.js'
 
-export const loadRepoList = async (): Promise<Array<Omit<Repository, 'id'>>> =>
-	(await readFile(path.join(process.cwd(), 'repos.txt'), 'utf-8'))
+export const loadRepoList = async (
+	location: string,
+): Promise<Array<Omit<Repository, 'id'>>> =>
+	(await readFile(location, 'utf-8'))
 		.trim()
 		.split('\n')
 		.filter((s) => !s.startsWith('#'))
