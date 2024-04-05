@@ -34,5 +34,7 @@ jobs:
       - name: Check if source code is properly formatted
         run: npx prettier -c ./
 
+      - run: npm test
+
       - name: Semantic release
         run: npx semantic-release
