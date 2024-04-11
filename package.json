@@ -5,8 +5,8 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/cdk/index.d.ts",
-        "default": "./dist/cdk/index.js"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       }
     }
   },
