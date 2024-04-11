@@ -3,10 +3,10 @@
   "version": "0.0.0-development",
   "description": "Sets up the permissions in our CI account for all repositories in this account to be able to use it for CI runs.",
   "exports": {
-    "./*": {
+    ".": {
       "import": {
-        "types": "./dist/*.d.ts",
-        "default": "./dist/*.js"
+        "types": "./dist/cdk/index.d.ts",
+        "default": "./dist/cdk/index.js"
       }
     }
   },
