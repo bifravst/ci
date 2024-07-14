@@ -1,6 +1,6 @@
 import { IAMClient } from '@aws-sdk/client-iam'
 import { ensureGitHubOIDCProvider } from './ensureGitHubOIDCProvider.js'
-import { fromEnv } from '@nordicsemiconductor/from-env'
+import { fromEnv } from '@bifravst/from-env'
 import { CIApp } from './CIApp.js'
 import { listRepos } from './listRepos.js'
 import { loadRepoList } from './loadRepoList.js'
