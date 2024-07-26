@@ -3,3 +3,4 @@ bifravst/aws-cdk-lambda-helpers
 bifravst/http-api-mock
 bifravst/rest-echo
 bifravst/sim-details
+bifravst/bdd-markdown-e2e-example-aws
