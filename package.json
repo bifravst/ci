@@ -36,7 +36,7 @@
   "devDependencies": {
     "@bifravst/eslint-config-typescript": "6.1.13",
     "@bifravst/from-env": "3.0.2",
-    "@bifravst/prettier-config": "1.0.4",
+    "@bifravst/prettier-config": "1.1.0",
     "@commitlint/config-conventional": "19.2.2",
     "@octokit/rest": "21.0.1",
     "aws-cdk": "2.151.0",
