@@ -47,7 +47,7 @@
     "constructs": "10.3.0",
     "globstar": "1.0.0",
     "husky": "9.1.4",
-    "tsx": "4.16.5"
+    "tsx": "4.17.0"
   },
   "lint-staged": {
     "*.{md,json,yaml,yml}": [
