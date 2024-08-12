@@ -1,7 +1,7 @@
-import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { loadRepoList } from './loadRepoList.js'
 import path from 'node:path'
+import { describe, it } from 'node:test'
+import { loadRepoList } from './loadRepoList.js'
 
 void describe('loadRepoList()', () => {
 	void it('should load the list of repos', async () => {
