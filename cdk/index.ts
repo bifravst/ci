@@ -1,3 +1,3 @@
 export * from './ContinuousDeployment.js'
-export * from './RepoPermission.js'
 export * from './ensureGitHubOIDCProvider.js'
+export * from './RepoPermission.js'
