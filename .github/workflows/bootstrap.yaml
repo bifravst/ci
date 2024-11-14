@@ -5,6 +5,11 @@ permissions:
 
 on:
   workflow_dispatch:
+    inputs:
+      aws_region:
+        description: "AWS region"
+        default: ""
+        required: false
 
 env:
   CI: 1
@@ -12,6 +17,7 @@ env:
   JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION: 1
   NODE_NO_WARNINGS: 1
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  AWS_REGION: ${{ vars.AWS_REGION_CI }}
 
 jobs:
   bootstrap:
@@ -19,6 +25,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Override AWS Region
+        if: ${{ github.event.inputs.aws_region != '' }}
+        run:
+          echo "AWS_REGION=${{ github.event.inputs.aws_region }}" >> $GITHUB_ENV
 
       - uses: actions/setup-node@v4
         with:
@@ -37,6 +48,6 @@ jobs:
           role-to-assume: |
             arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID_CI }}:role/${{ github.repository_owner }}-ci-${{ github.event.repository.name }}
           # vars.AWS_REGION_CI is an organization variable
-          aws-region: ${{ vars.AWS_REGION_CI }}
+          aws-region: ${{ env.AWS_REGION }}
 
       - run: npx cdk bootstrap
