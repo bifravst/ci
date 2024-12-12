@@ -8,12 +8,14 @@ export class ContinuousDeployment extends Construct {
 		{
 			repository: { owner, repo },
 			gitHubOICDProviderArn,
+			environment,
 		}: {
 			repository: {
 				owner: string
 				repo: string
 			}
 			gitHubOICDProviderArn: string
+			environment?: string
 		},
 	) {
 		super(parent, 'cd')
@@ -30,7 +32,7 @@ export class ContinuousDeployment extends Construct {
 				gitHubOIDC.openIdConnectProviderArn,
 				{
 					StringEquals: {
-						[`token.actions.githubusercontent.com:sub`]: `repo:${owner}/${repo}:environment:production`,
+						[`token.actions.githubusercontent.com:sub`]: `repo:${owner}/${repo}:environment:${environment ?? 'production'}`,
 						[`token.actions.githubusercontent.com:aud`]: 'sts.amazonaws.com',
 					},
 				},
