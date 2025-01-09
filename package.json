@@ -38,7 +38,7 @@
     "@bifravst/from-env": "3.0.2",
     "@bifravst/prettier-config": "1.1.4",
     "@commitlint/config-conventional": "19.6.0",
-    "@octokit/rest": "21.0.2",
+    "@octokit/rest": "21.1.0",
     "aws-cdk": "2.174.1",
     "aws-cdk-lib": "2.174.1",
     "cdk": "2.174.1",
