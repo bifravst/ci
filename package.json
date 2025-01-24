@@ -95,7 +95,7 @@
   ],
   "prettier": "@bifravst/prettier-config",
   "peerDependencies": {
-    "@aws-sdk/client-iam": "^3.731.1",
+    "@aws-sdk/client-iam": "^3.734.0",
     "chalk": "^5.4.1"
   }
 }
