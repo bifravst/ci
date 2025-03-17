@@ -9,5 +9,4 @@ cdk.out/
 dist/
 .envrc
 /certificates/
-cdk.context.json
 e2e-test-result.json
