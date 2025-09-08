@@ -39,7 +39,7 @@
     "@bifravst/prettier-config": "1.1.12",
     "@commitlint/config-conventional": "19.8.1",
     "@octokit/rest": "22.0.0",
-    "aws-cdk": "2.1027.0",
+    "aws-cdk": "2.1029.0",
     "aws-cdk-lib": "2.213.0",
     "cdk": "2.1027.0",
     "check-node-version": "4.2.1",
