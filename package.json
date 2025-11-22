@@ -41,7 +41,7 @@
     "@octokit/rest": "22.0.1",
     "aws-cdk": "2.1033.0",
     "aws-cdk-lib": "2.225.0",
-    "cdk": "2.1032.0",
+    "cdk": "2.1033.0",
     "check-node-version": "4.2.1",
     "commitlint": "19.8.1",
     "constructs": "10.4.3",
