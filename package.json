@@ -47,7 +47,7 @@
     "constructs": "10.5.1",
     "globstar": "1.0.0",
     "husky": "9.1.7",
-    "lint-staged": "16.3.0",
+    "lint-staged": "16.3.1",
     "tsx": "4.21.0"
   },
   "lint-staged": {
