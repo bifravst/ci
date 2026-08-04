@@ -1,7 +1,7 @@
 import type { App } from 'aws-cdk-lib'
 import { CfnOutput, Stack } from 'aws-cdk-lib'
-import { RepoPermission } from './RepoPermission.js'
-import type { Repos } from './listRepos.js'
+import { RepoPermission } from './RepoPermission.ts'
+import type { Repos } from './listRepos.ts'
 
 export class CIStack extends Stack {
 	public constructor(
