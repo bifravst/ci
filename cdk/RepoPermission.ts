@@ -1,7 +1,7 @@
 import { Duration, aws_iam as IAM, Stack } from 'aws-cdk-lib'
 import { Construct } from 'constructs'
-import type { Repository } from './listRepos.js'
-import { sanitize } from './sanitize.js'
+import type { Repository } from './listRepos.ts'
+import { sanitize } from './sanitize.ts'
 
 export class RepoPermission extends Construct {
 	public readonly role: IAM.IRole

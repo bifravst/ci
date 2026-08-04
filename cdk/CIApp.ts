@@ -1,5 +1,5 @@
 import { App } from 'aws-cdk-lib'
-import { CIStack } from './CIStack.js'
+import { CIStack } from './CIStack.ts'
 
 export class CIApp extends App {
 	public constructor(

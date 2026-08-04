@@ -1,9 +1,9 @@
 import { IAMClient } from '@aws-sdk/client-iam'
 import { fromEnv } from '@bifravst/from-env'
-import { CIApp } from './CIApp.js'
-import { ensureGitHubOIDCProvider } from './ensureGitHubOIDCProvider.js'
-import { listRepos } from './listRepos.js'
-import { loadRepoList } from './loadRepoList.js'
+import { CIApp } from './CIApp.ts'
+import { ensureGitHubOIDCProvider } from './ensureGitHubOIDCProvider.ts'
+import { listRepos } from './listRepos.ts'
+import { loadRepoList } from './loadRepoList.ts'
 
 const { token } = fromEnv({
 	token: 'GITHUB_TOKEN',

@@ -1,5 +1,5 @@
 import { readFile } from 'node:fs/promises'
-import type { Repository } from './listRepos.js'
+import type { Repository } from './listRepos.ts'
 
 export const loadRepoList = async (
 	location: string,
