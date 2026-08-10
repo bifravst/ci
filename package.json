@@ -42,7 +42,7 @@
     "@swc/core": "1.15.47",
     "@types/node": "26.1.2",
     "@typescript/native": "npm:typescript@7.0.2",
-    "aws-cdk": "2.1135.0",
+    "aws-cdk": "2.1135.1",
     "aws-cdk-lib": "2.263.0",
     "cdk": "2.1135.0",
     "check-node-version": "4.2.1",
