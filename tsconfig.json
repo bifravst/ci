@@ -20,8 +20,10 @@
     "noUnusedLocals": true,
     "types": ["node"],
     "allowImportingTsExtensions": true,
-    "rootDir": "."
+    "rewriteRelativeImportExtensions": true,
+    "rootDir": "./cdk",
+    "outDir": "./dist"
   },
   "exclude": ["cdk.out/**/*", "dist/**/*"],
-  "include": ["./**/*.ts", "./.npm/*.ts"]
+  "include": ["./**/*.ts"]
 }
