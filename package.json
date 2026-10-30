@@ -13,7 +13,7 @@
   "type": "module",
   "scripts": {
     "prepare": "husky && case \"$npm_command\" in install|ci) check-node-version --package ;; esac",
-    "test": "node --no-warnings --experimental-transform-types --test \"!(node_modules)/**/*.spec.ts\"",
+    "test": "node --no-warnings --test \"!(node_modules)/**/*.spec.ts\"",
     "prepublishOnly": "npx tsc --noEmit false -d"
   },
   "repository": {
