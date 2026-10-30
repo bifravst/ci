@@ -35,7 +35,7 @@
   "license": "BSD-3-Clause",
   "devDependencies": {
     "@bifravst/eslint-config-typescript": "8.0.15",
-    "@bifravst/from-env": "4.0.0",
+    "@bifravst/from-env": "4.0.1",
     "@bifravst/prettier-config": "2.0.4",
     "@commitlint/config-conventional": "21.2.4",
     "@octokit/rest": "22.0.1",
